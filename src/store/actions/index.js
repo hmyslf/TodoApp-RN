@@ -61,3 +61,24 @@ export const addNewTodo = (token, payload) => {
       })
   }
 }
+
+export const updateTodo = (token, payload) => {
+  return (dispatch) => {
+    server.put(`/todos/${payload.id}`, {
+      title: payload.title,
+      description: payload.description,
+      status: payload.status,
+      due_date: payload.due_date
+    }, {
+      headers: {
+        token
+      }
+    })
+      .then(result => {
+        dispatch(fetchTodos(token));
+      })
+      .catch(err => {
+        dispatch(setMessage(err.message));
+      });
+  }
+}

@@ -19,5 +19,6 @@ export default StyleSheet.create({
     width: wp('25%'),
     height: hp('6%'),
     marginTop: hp('1%'),
+    marginBottom: hp('2%')
   }
 });
