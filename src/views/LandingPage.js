@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   AsyncStorage
 } from 'react-native';
-import styles from '../styles/landingpage.js';
+import styles from '../styles/LandingPage.js';
 import { useNavigation } from '@react-navigation/native';
 import server from '../api/index.js';
 

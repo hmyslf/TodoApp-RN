@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import Home from './src/views/Home.js';
 import LandingPage from './src/views/LandingPage.js';
 import store from './src/store';
+import AddTodo from './src/views/AddTodo.js';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,15 @@ export default function App() {
             name="Home"
             component={Home}
             options={{
+              title: 'Your Todo List',
+              headerLeft: null
+            }}
+          />
+          <Stack.Screen 
+            name="AddTodo"
+            component={AddTodo}
+            options={{
+              title: 'Add Todo',
               headerLeft: null
             }}
           />

@@ -1,5 +1,7 @@
 import {
-  FETCH_TODOS, SET_MESSAGE
+  FETCH_TODOS,
+  SET_MESSAGE,
+  FETCH_REQUEST
 } from '../actions';
 
 const initialState = {
@@ -16,6 +18,11 @@ const reducers = (state = initialState, action) => {
         ...state,
         loading: false,
         todos: payload
+      }
+    case FETCH_REQUEST:
+      return {
+        ...state,
+        loading: payload
       }
     case SET_MESSAGE:
       return {
