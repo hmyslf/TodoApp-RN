@@ -2,11 +2,11 @@ import server from '../../api';
 export const FETCH_TODOS = 'FETCH_TODOS';
 export const SET_MESSAGE = 'SET_MESSAGE';
 
-export const fetchTodos = () => {
+export const fetchTodos = (token) => {
   return (dispatch) => {
     server.get('/todos', {
       headers: {
-
+        token
       }
     })
       .then(({ data }) => {
